@@ -1,0 +1,140 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.navItem {
+  color: var(--font-color-disabled);
+}
+
+.activeTab {
+  color: var(--font-color-base);
+}
+
+.header {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: center;
+  margin: var(--spacing-7) 0;
+}
+
+.text {
+  margin-bottom: var(--spacing-7);
+}
+
+.favoriteButton {
+  display: flex;
+  gap: var(--spacing-8);
+  align-items: center;
+  text-decoration-line: none;
+  background: none;
+  border: none;
+}
+
+.starEmpty {
+  path {
+    fill: none;
+  }
+}
+
+.logo {
+  flex-basis: 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding-bottom: var(--spacing-7);
+  border-bottom: 1px solid var(--border-color-disabled);
+}
+
+.descriptionWrapper {
+  display: flex;
+}
+
+.descriptionColumn {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-7);
+}
+
+.navInfo {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 0;
+  margin-bottom: var(--spacing-4);
+
+  li {
+    display: flex;
+    justify-content: center;
+    padding: 3px var(--spacing-9);
+    border-right: 1px solid var(--border-color-disabled);
+  }
+
+  li:last-of-type {
+    border-right: none;
+  }
+
+  li:first-of-type {
+    padding-left: 0;
+  }
+
+  a {
+    color: var(--font-color-disabled);
+    text-align: center;
+
+    &:active,
+    &:hover {
+      color: var(--font-color-base);
+    }
+
+    &::after {
+      position: relative;
+      left: 50%;
+      display: block;
+      width: 0;
+      height: 2px;
+      content: '';
+      background-color: #ffaa00;
+      transition: width 0.3s ease-in-out;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after,
+    &:active::after {
+      width: 100%;
+      color: var(--font-color-base);
+    }
+  }
+
+  .active {
+    color: var(--font-color-base);
+  }
+}
+
+.link {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.sectionHeader {
+  margin-bottom: var(--spacing-6);
+}
+
+.solutionsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-7);
+}
+
+.solutionItem {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+  border: 1px solid var(--border-color-disabled);
+}

@@ -1,0 +1,98 @@
+@import '/src/styles/shared/breakpoints.scss';
+
+.profile {
+  @include breakpoint(xs) {
+    display: flex;
+    justify-content: flex-end;
+  }
+  position: relative;
+  gap: var(--spacing-8);
+  font-size: var(--normalBold-font-size);
+  font-weight: var(--normalBold-font-weight);
+
+  &.open {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  background-color: var(--background-color-bright);
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 170%;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  padding: var(--spacing-6);
+  padding-right: var(--spacing-3);
+  padding-left: var(--spacing-3);
+  white-space: nowrap;
+  background-color: #f3f7fa;
+  border-radius: 5px;
+}
+
+.email {
+  font-size: var(--normalBold-font-size);
+  font-weight: var(--normalBold-font-weight);
+  text-transform: capitalize;
+
+  &:hover {
+    color: var(--font-color-hover);
+    cursor: pointer;
+  }
+}
+
+.link {
+  display: flex;
+  gap: var(--spacing-8);
+  color: var(--font-color-base);
+
+  &:visited {
+    color: var(--font-color-base);
+  }
+
+  &:hover {
+    color: var(--font-color-hover);
+
+    path {
+      fill: var(--font-color-hover);
+    }
+  }
+}
+
+.button {
+  display: flex;
+  gap: var(--spacing-8);
+  padding: 0;
+  font-family: var(--normalBold-font-family);
+  font-size: var(--normalBold-font-size);
+  font-weight: var(--normalBold-font-weight);
+  color: var(--font-color-error);
+  background-color: inherit;
+  border: none;
+
+  &:hover {
+    color: var(--font-color-hover);
+
+    path {
+      stroke: var(--font-color-hover);
+    }
+  }
+}

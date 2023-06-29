@@ -1,0 +1,39 @@
+@import '/src/styles/shared/breakpoints.scss';
+
+.wrapper {
+  @include breakpoint(sm) {
+    display: flex;
+    flex-basis: 33%;
+  }
+
+  @include breakpoint(lg) {
+    flex-basis: 25%;
+  }
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.filterName {
+  display: flex;
+  gap: var(--spacing-8);
+  align-items: center;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: var(--spacing-7);
+  max-width: 100%;
+}
+
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-9);
+}

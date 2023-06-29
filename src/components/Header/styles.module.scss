@@ -1,0 +1,81 @@
+@import '/src/styles/shared/breakpoints.scss';
+
+.header {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--spacing-5);
+  }
+
+  .subheader {
+    @include breakpoint(md) {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--spacing-8) var(--spacing-5);
+    }
+  }
+
+  .linkWrapper {
+    @include breakpoint(md) {
+      display: flex;
+      gap: var(--spacing-9);
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  .signIn {
+    @include breakpoint(md) {
+      display: flex;
+      gap: var(--spacing-9);
+      align-items: center;
+      padding: 0 var(--spacing-9);
+      border-right: solid 1px;
+    }
+  }
+
+  .signUp {
+    @include breakpoint(md) {
+      display: flex;
+      gap: var(--spacing-10);
+      align-items: center;
+      padding: 0 0 0 var(--spacing-9);
+      cursor: pointer;
+    }
+  }
+}
+
+.phoneWrapper {
+  @include breakpoint(md) {
+    display: flex;
+    gap: var(--spacing-9);
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+.dropdown {
+  padding-right: var(--spacing-7);
+  padding-left: var(--spacing-7);
+  background: url('../../assets/icons/footer_language.svg') no-repeat 0 4px;
+}
+
+.lang {
+  padding: 4px;
+  font-size: var(--smallBold-font-size);
+  font-weight: var(--largeRegular-font-weight);
+  line-height: var(--normalRegular-line-height);
+  color: #4c4c4c;
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline-color: transparent;
+  }
+}
+
+.star {
+  width: var(--spacing-7);
+  height: var(--spacing-7);
+}

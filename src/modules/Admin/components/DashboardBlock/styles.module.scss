@@ -1,0 +1,18 @@
+.wrapper {
+  padding: var(--spacing-6) var(--spacing-4);
+  cursor: pointer;
+  background-color: #fff3e9;
+  border-radius: 4px;
+  box-shadow: 2px 2px 15px rgba(62, 28, 0, 0.1);
+
+  &:hover {
+    background-color: #f3f7fa;
+  }
+}
+
+.title {
+  padding: var(--spacing-8);
+  font-size: var(--largeRegular-font-size);
+  font-weight: var(--largeRegular-font-weight);
+  text-align: center;
+}
